@@ -8,9 +8,10 @@ public class MyGitClass {
 		
 		System.out.println("My third commit");
 		System.out.println("My 4th commit");
-		System.out.println("My 5 commit");
-		
-		System.out.println("uzk sunucda ki kodlarim");
+		System.out.println("buraya yenikod yazildi");
+		System.out.println("buraya yenikod yazildi");
+		System.out.println("buraya yenikod yazildi");
+		System.out.println("buraya yenikod yazildi");
 		
 
 	}
