@@ -14,6 +14,7 @@ public class MyGitClass {
 		System.out.println("degisiklik yapildi");
 		System.out.println("buraya yenikod yazildi");
 		System.out.println("buraya yenikod yazildi");
+		System.out.println("buraya 17.satir yazildi");
 
 	}
 
