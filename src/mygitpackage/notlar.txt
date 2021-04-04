@@ -1,0 +1,88 @@
+1. Local bilgisayarimizda olan kodlari githuba (remote repository) gonderme:
+*****KOMUTLAR*******
+****git init        :    Projenin en basinda Tek sefer kullanilir
+Projenin icindeyken, git init dedigimizde, .git folderi olusur.
+Bu folderda git bilgilerimiz saklanir. Kisaca local repository olusturur
+---------
+1. Proje olusturduk         
+2. Terminalde projenin icine girdik : cd path
+3. .git dosyasi olusturduk          : git init (tek sefer yapilir)
+---------
+git add .
+git commit -m "ilk commit"
+An itibariyle ilk versiyonumu olusturdum
+Kodlarimi github a gonderebilirim
+NOTE: ILK OLARAK GITHUB.COM DA REMOTE REPOSITORY OLUSTURMAM GEREKIR
+---GITHUB DA REPOSITORY NASIL OLUSTURULUR----
+Assagidaki islemler tek seferligine yapilir
+https://github.com/
+New e tikla
+Repository Name : mygitproject
+Public yapalim
+Create repository ye tikla
+Githubdaki son 2 adimi yapalim:
+git remote add origin https://github.com/techproed/mygitproject.git  : Bu islem projeyi ilk sefer github a gondermek icin zorunludur. 
+Sonraki islemlerde bu adima gerek olmayacak
+NOTE: "main" kismini assaigidaiki gibi "master" ile degistirelim
+git push -u origin master   : Bu islem ilk olarak tek seferlik yapilir 
+Sayfayayi yenileyelim
+Local bilgisayarimdaki kodlar github.com a copyalanmis oldu
+===================HATA ALAN ARKADASLAR ICIN========================
+git config credential.username "git username"
+git config credential.username "techproed"
+git config credential.password "git password"
+git config credential.password "12345"
+git remote add origin https://github.com/techproed/mygitproject.git
+git push -u origin master
+==================================================================
+BU ADIMDAN SONRAKI ISLEMLER HER SEFERINDE TEKRAR EDILEN ISLEMLERDIR
+///////////////////////////////////
+* git add .                         /
+* git commit -m "version mesaji"  /
+* git push                          /
+///////////////////////////////////
+Ornek adimlar
+    Kod ekle
+    git status (zorunlu degil)-> kirmiziliklar bilgisayarimdaki degisiklikleri gosteriyor
+    git add . -> staging area ya kodlarmi ekle
+    git status (zorunlu degil)-> yesil renkler kodlarin staging area da oldugunu gosterir
+    git commit -m "ISTEGINMIZ MESAJI VEREBILIRIZ" -> yeni versiyon olusturdum. Staging area daki kodlari local repoya ekler
+    git status
+    git push -> github a yeni versiyonlarimizi gonderiyoruz
+========================================================================
+DAY 2
+TEKRAR:
+Git Nedir?
+----------------------
+V1.0.0
+V1.0.1
+V1.0.2
+Git farkli versiyonlari bildisayimizda depolamammmizi saglar
+Ayni projelerde takim halinde birlikte calismamizi saglar
+Yuzde 90 dan fazlasi github kullanir
+Git hub ucretsiz
+Hizli
+Mucrosoft guthubu satin aldi
+----Githubi nasil kullaniriz?
+Command Line, Terminal, Git Bash,...
+IDE(eclipse, intellij, VSCode,..) lerin terminalleri
+SourceTree
+---Git in bilgisayarimizda yuklu olup olmadiginiz nasil anlariz?
+git --version
+---Github Projelerini Uzak sunucuya nasil gonderebilir?
+a. Ilk versiyonun githuba gonderilmesi:
+    *cd projeyolu -> Projenin icinde oldugumuzdan emin olalim
+        cd /Users/techproed/eclipse-workspace/mygitproject
+    *git init -> .git soyasi olusturur
+    *git status -> degisikleri goruyoruz. zorunlu degil.
+    *git add . -> staging areaya kodlarim gitti
+    *git commit -m "mesajim" -> yeni versiyon olusturdum
+    *git remote add origin https://github.com/techproed/mygitproject.git -> kodlarin gidecegi linki tanitiyorum
+    *git push -u origin master -> kodlarim uzak sunucuya gider
+b. Sonraki versiyonlarin olusmasi ve githubu gonderilmesi
+    *git add .
+    *git commit -m "mesajim"
+    *git push
+------------------------
+KOD AKISI:
+Proje Dosyasi(Eclipse)=>git add .=>Staging Area(Gecici Bellek)=>git commit -m "mesajim"=>Local Repository(yerel depo)=>git push=>Remote Repository(Uzak Sunucu)
