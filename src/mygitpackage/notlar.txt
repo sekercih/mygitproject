@@ -30,7 +30,7 @@ Local bilgisayarimdaki kodlar github.com a copyalanmis oldu
 ===================HATA ALAN ARKADASLAR ICIN========================
 git config credential.username "git username"
 git config credential.username "techproed"
-git config credential.password "git password"
+git config credential.username "kullanici adi"
 git config credential.password "12345"
 git remote add origin https://github.com/techproed/mygitproject.git
 git push -u origin master
@@ -86,3 +86,48 @@ b. Sonraki versiyonlarin olusmasi ve githubu gonderilmesi
 ------------------------
 KOD AKISI:
 Proje Dosyasi(Eclipse)=>git add .=>Staging Area(Gecici Bellek)=>git commit -m "mesajim"=>Local Repository(yerel depo)=>git push=>Remote Repository(Uzak Sunucu)
+=======GITHUB KODLARINI BILGISAYIMA NASIL ALIRIM====================
+Ozellikle Takim calismalarinda, takim arkadaslarimin yazdigi kodlari bilgisarima alip, bilgisayimi guncellemem gerekir
+Github.com da degisiklik oldugunda, o degislileri kendi bilgiyarima almmam gerekir
+*Uzak sunucumda  degisiklik yapalim:
+    *java dossayina gidelim
+    *kalem isaretine basalim
+    *sonraki satira yeni kod ekleyelim
+    *commit changes e tikladik
+    *Bu islemlerden sonra uzak sunucumda yeni versiyon olustu
+Yeni versiyonu kendi bilgisayirima cekmem gerekir:
+*Projenin icinde olsogunuzdan emin olun
+================================================
+    *git fetch -> githubdaki kodlari local rempoya alir ama kodlari birlestirmez
+    *git merge -> githubdaki codlari bilgisayarimizdaki kodlarla birlestirir
+    *git pull = git fetch + git merge          
+================================================
+Pratik:
+    En son satira kod ekleyin
+    *git fetch
+    *git merge
+    *git pull
+NOTE: git pull yeterli, ama git fetch ve git merge ild baslarda adim adim gitmek icin onemli
+*****Interview sorusu: git merge ile git pull arasindaki fark nedir?
+git merge SADECE kod birlestirme islemi yapar
+git pull = git fetch + git merge
+====HATA DURUMLARI================
+* Takim calismalarinda farkli kisiler ayni satirlara kod yazmissa kodlari birlestirme sirasinda hata olusur
+SENARYO:
+*GITHUB 12. satir : kod ekledik
+*ECLIPSE 12. SATIR: kod ekle ve versiyon oliustur
+Bu durumda git push YAPAMAM. Sebebi guthub.com daki guncel kodlari bilgisayarima almam gerekir
+*Githibdaki kodlari bilgisayara alalim:
+    *git fetch
+    *git merge ---->>>>CONFLICT OLUSUR
+Replace Editor Content Gorurseniz o secenege tiklayin
+CONFLICT NASIL COZULUR?
+Sadece karacterlerin oldugu satirlari silebiliriz
+SAVE edelim
+Yeni versiyon olusturup githuba kod gonderecez
+    *git add .
+    *git commit -m "mesajim"
+    *git push
+AN itibaruyle hata almamam gerekir. Kodlari birlestirip gonderme islemi tamamlandi
+ONEMLI OLAN : git pull before you push
+              Kodlari gondermeden once kodlari cek
