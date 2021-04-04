@@ -7,10 +7,13 @@ public class MyGitClass {
 		System.out.println("My secon commit");
 		System.out.println("buraya yenikod yazildi");
 		System.out.println("degisiklik yapildi");
+		
 		System.out.println("My third commit");
 		System.out.println("My 4th commit");
+		
 		System.out.println("buraya yenikod yazildi");
 		System.out.println("degisiklik yapildi");
+		
 		System.out.println("buraya yenikod yazildi");
 		System.out.println("buraya yenikod yazildi");
 		
