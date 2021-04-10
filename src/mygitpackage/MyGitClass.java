@@ -16,6 +16,8 @@ public class MyGitClass {
 		System.out.println("buraya yenikod yazildi");
 		System.out.println("17. satir bilgisayarým");
 		System.out.println("buraya 17.satir yazildi");
+		
+		System.out.println("hakko^nun branch yazdigi kodlar");
 
 
 	}
